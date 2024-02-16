@@ -47,13 +47,45 @@ notas = pd.read_csv("ratings.csv")
 ´´´ 
 
 * Mostrar as 5 primeiras linhas de um arquivo csv:
-´´´
+
+```
 notas.head()
 
-´´´
+```
+
+* Mostrar o formato da tabela 
+
+```
+notas.shape
+
+```
+
+* Alterar nome de Colunas:
+```
+notas.columns = ["usuarioId","filmeId","nota","momento"]
+``` 
+* Valores de uma coluna:
+``` 
+notas['nota']
+``` 
+
+* Saber quais são os valores unicos dentre uma coluna
+
+``` 
+notas['nota'].unique()
+``` 
+
+* Quantas repetições de um valor em uma coluna 
+``` 
+notas['nota'].value_counts()
+``` 
+
+* Media das notas em uma coluna
+``` 
+notas['nota'].mean()
+``` 
 
 
 
-
-Continuar: Aula 01 - Video 04 - 09:40.
+Continuar: Aula 01 - Video 05 - 00:00.
 Criar um novo repositorio privado
