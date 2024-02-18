@@ -85,7 +85,58 @@ notas['nota'].value_counts()
 notas['nota'].mean()
 ``` 
 
+* Acessar uma coluna:
+``` 
+notas.nota
+``` 
+
+* Plotar - imprimir na tela visualmente
+
+``` 
+notas.nota.plot() 
+
+``` 
+
+* histograma - distribuição dos valores em um gráfico
+``` 
+notas.nota.plot(kind='hist')
+``` 
+
+* imprimir a mediana:
+``` 
+print(notas['nota'].mean())
+
+print(notas['nota'].median())
+``` 
+
+* Describe - dá diversas medidas de descrição de forma automatica
+``` 
+notas.nota.describe()
+
+``` 
+
+* Seaborn - biblioteca de visualizações do panda
+``` 
+import seaborn as sns
+``` 
+
+* Boxplot - mostra visualmente as informações do describe
+``` 
+sns.boxplot(notas.nota)
+``` 
+
+* Query - para cruzar informações entre colunas é necessário fazer uma query. Por exemplo saber a nota de um determinado filme:
+``` 
+notas.query("filmeId==1").nota
+notas.query("filmeId==1").nota.mean()
+``` 
+
+* Comentários - podem ser feitos nos notebooks virtuais também. Para adicionar um comentário é necessário escolher a opção TEXT.. No botão Move cell up o comentário é movido para cima e no Move cell down é movido para baixo.
 
 
-Continuar: Aula 01 - Video 05 - 00:00.
+
+
+
+
+Continuar: Aula 02 - Video 02 - 05:22.
 Criar um novo repositorio privado
