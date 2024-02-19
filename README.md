@@ -133,10 +133,45 @@ notas.query("filmeId==1").nota.mean()
 
 * Comentários - podem ser feitos nos notebooks virtuais também. Para adicionar um comentário é necessário escolher a opção TEXT.. No botão Move cell up o comentário é movido para cima e no Move cell down é movido para baixo.
 
+* Agrupar os valores por uma coluna:
+``` 
+notas.groupby("filmeId")
+
+``` 
+Serádevolvido um objeto data frame do groupby do pandas que possibilita ser usado para alguma outra função, por exemplo tirar a média desse grupo:
+``` 
+notas.groupby("filmeId").mean()
+
+``` 
+Na visualização do groupby foi mostrado também a média de outras colunas. Para extração somente da coluna nota podemos fazer o seguinte:
+``` 
+notas.groupby("filmeId").mean()["nota"]
+
+ou 
+
+notas.groupby("filmeId").mean().nota
+
+``` 
+
+OBS: Para facilitar o retorno do agrupamento de uma coluna pode ser posto o resultado esperado em uma variavel aux, ex:
+``` 
+media_por_filme = notas.groupby("filmeId").mean().nota
+``` 
+
+* Histograma da media de uma coluna - 
+```
+ media_por_filme.plot(kind='hist')
+
+``` 
+
+# Outra biblioteca gráfica: Seaborn
+
+* Como utilizar o Seaborn: 
+``` 
+sns.boxplot(media_por_filme.nota)
+
+``` 
 
 
-
-
-
-Continuar: Aula 02 - Video 02 - 05:22.
+Continuar: Aula 02 - Video 02 - 12:02.
 Criar um novo repositorio privado
