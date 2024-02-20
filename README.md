@@ -155,12 +155,12 @@ notas.groupby("filmeId").mean().nota
 
 OBS: Para facilitar o retorno do agrupamento de uma coluna pode ser posto o resultado esperado em uma variavel aux, ex:
 ``` 
-media_por_filme = notas.groupby("filmeId").mean().nota
+medias_por_filme = notas.groupby("filmeId").mean().nota
 ``` 
 
 * Histograma da media de uma coluna - 
 ```
- media_por_filme.plot(kind='hist')
+ medias_por_filme.plot(kind='hist')
 
 ``` 
 
@@ -168,9 +168,39 @@ media_por_filme = notas.groupby("filmeId").mean().nota
 
 * Como utilizar o Seaborn: 
 ``` 
-sns.boxplot(media_por_filme.nota)
+sns.boxplot(media_por_filme)
 
 ``` 
+
+* Gráfico de Histograma no seaborn:
+``` 
+sns.displot(medias_por_filme)
+``` 
+
+* Descrição das medias de uma coluna:
+``` 
+medias_por_filme.describe()
+
+``` 
+
+# Biblioteca matematica:
+
+* Matplotlib - é uma biblioteca de baixo nível matemática utilizada pelo pandas
+
+* importando a biblioteca matplotlib:
+``` 
+import matplotlib.pyplot as plt
+``` 
+
+* histograma da matplotlib
+``` 
+plt.hist(medias_por_filme)
+``` 
+
+* Titulo do histograma na matplotlib:
+``` 
+plt.title("Histograma das medias dos filmes")
+
 
 
 Continuar: Aula 02 - Video 02 - 12:02.
