@@ -201,6 +201,17 @@ plt.hist(medias_por_filme)
 ``` 
 plt.title("Histograma das medias dos filmes")
 
+# Separando Categorias:
+
+* categoria nominal:
+``` 
+tmdb.original_language.unique()
+``` 
+* mostrar uma coluna: 
+``` 
+tmdb["original_language"]
+``` 
+
 
 
 Continuar: Aula 02 - Video 02 - 12:02.
