@@ -164,7 +164,7 @@ medias_por_filme = notas.groupby("filmeId").mean().nota
 
 ``` 
 
-# Outra biblioteca gráfica: Seaborn
+## *Outra biblioteca gráfica: Seaborn*
 
 * Como utilizar o Seaborn: 
 ``` 
@@ -183,7 +183,7 @@ medias_por_filme.describe()
 
 ``` 
 
-# Biblioteca matematica:
+## *Biblioteca matematica:*
 
 * Matplotlib - é uma biblioteca de baixo nível matemática utilizada pelo pandas
 
@@ -201,7 +201,7 @@ plt.hist(medias_por_filme)
 ``` 
 plt.title("Histograma das medias dos filmes")
 
-# Separando Categorias:
+## *Separando Categorias:*
 
 * categoria nominal:
 ``` 
@@ -211,6 +211,40 @@ tmdb.original_language.unique()
 ``` 
 tmdb["original_language"]
 ``` 
+
+## *Exemplo de leitura de um arquivo e a listagem de uma categoria:*
+
+* Faça o upload do arquivo csv no notebook:
+ 
+arquivo: tmdb_5000_movies.csv
+
+* Faça o import da biblioteca pandas:
+``` 
+import pandas as pd
+``` 
+
+* Adicione a leitura do arquivo a uma variavel
+``` 
+tmdb = pd.read_csv("tmdb_5000_movies.csv")
+``` 
+
+* Liste uma categoria nominal do arquivo csv:
+``` 
+tmdb.original_language.unique()
+```
+
+## *Exemplo de Categorias de dados:*
+* Categoria nominal: a mostragem dos dados não precisa ser de acordo com uma ordem. Não utiliza uma classificação de acordo com uma regra, no caso da categoria nominal os valores não são ordenaveis como: ordem alfabética, ordem crescente, ordem decrescente.. exemplo de categoria nominal: listagem de idiomas de filmes, nomes de pessoas ...
+
+
+* Categoria por ordem: é organizada por uma classificação de acordo com uma regra, por exemplo: ordem alfabética, ordem crescente, ordem decrescente.. a mostragem dos dados deverá ser de acordo com uma ordem.
+
+* Categoria quantitativa: é uma categoria onde o valor dos dados contabilizara um valor total. Exemplo: o número de votos em uma pessoa. Cada pessoa terá um número inteiro de votos por exemplo 1, 2, 3, 4, e não 3.5 
+
+* Categoria quantitativa continua: reune valores que podem variar de x a y no entanto contabilizara os valores entre os intervalos menores de x a y por exemplo: a categoria budget de um filme. O orçamento pode ser de 0 a 500 reais mas os centavos também podem variar. 
+
+  
+
 
 
 
