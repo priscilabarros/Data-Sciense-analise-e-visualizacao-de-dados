@@ -244,7 +244,8 @@ tmdb.original_language.unique()
 * Categoria quantitativa continua: reune valores que podem variar de x a y no entanto contabilizara os valores entre os intervalos menores de x a y por exemplo: a categoria budget de um filme. O orçamento pode ser de 0 a 500 reais mas os centavos também podem variar. 
 
   
-
+## *Adicionar uma seção com titulo em destaque no notebook:*
+* Vá em +Code e escreva o título. Mas para se obter mais destaque com o tamanho das letras e para que essa seção seja colapsada com as celulas de execução que ficam posterior a esse título, deve-se adicionar "#" ao inicio do Título.
 
 
 
