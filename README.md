@@ -185,7 +185,7 @@ medias_por_filme.describe()
 
 ## *Biblioteca matematica:*
 
-* Matplotlib - é uma biblioteca de baixo nível matemática utilizada pelo pandas
+* Matplotlib - é uma biblioteca de baixo nível matemática utilizada pelo pandas/seaborn. Costuma-se importar essa biblioteca como plt
 
 * importando a biblioteca matplotlib:
 ``` 
@@ -200,6 +200,30 @@ plt.hist(medias_por_filme)
 * Titulo do histograma na matplotlib:
 ``` 
 plt.title("Histograma das medias dos filmes")
+
+* Eixo do box plot: Você pode alterar o eixo do boxplot através do comando
+``` 
+sns.boxplot(y=medias_por_filme)
+``` 
+
+* Mudando tamanho do grafico atraves do comando:
+``` 
+import matplot.pyplot as plt
+
+plt.figure(figsize=(5,8))
+``` 
+
+
+## *Distribuição de médias:*
+* usando o box plot do seeborn: Vamos utilizar o sns
+``` 
+sns.boxplot(medias_por_filme)
+``` 
+
+* controlando o numéro de colunas para aparecer no gráfico:
+``` 
+sns.displot(medias_por_filme, bins=10)
+``` 
 
 ## *Separando Categorias:*
 
@@ -249,5 +273,7 @@ tmdb.original_language.unique()
 
 
 
-Continuar: Aula 02 - Video 02 - 12:02.
+
+
+Continuar: Aula 02 - Atividade 04 - iniciar leitura.
 Criar um novo repositorio privado
