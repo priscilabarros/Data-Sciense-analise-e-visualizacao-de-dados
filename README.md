@@ -262,8 +262,20 @@ tmdb.original_language.unique()
 
 
 * Categoria por ordem: é organizada por uma classificação de acordo com uma regra, por exemplo: ordem alfabética, ordem crescente, ordem decrescente.. a mostragem dos dados deverá ser de acordo com uma ordem.
+EX: 
+tmdb = pd.read_csv("tmdb_5000_movies.csv")
+tmdb["original_language"]
 
 * Categoria quantitativa: é uma categoria onde o valor dos dados contabilizara um valor total. Exemplo: o número de votos em uma pessoa. Cada pessoa terá um número inteiro de votos por exemplo 1, 2, 3, 4, e não 3.5 
+EX: 
+tmdb = pd.read_csv("tmdb_5000_movies.csv")
+tmdb["original_language"].value_counts()
+
+OBS: o to_frame() transforma uma serie em uma coluna bem organizada e padronizada.
+EX: tmdb["original_language"].value_counts().to_frame()
+
+OBS: o reset_index() adiciona um indice a uma coluna. 
+EX: tmdb["original_language"].value_counts().to_frame().reset_index()
 
 * Categoria quantitativa continua: reune valores que podem variar de x a y no entanto contabilizara os valores entre os intervalos menores de x a y por exemplo: a categoria budget de um filme. O orçamento pode ser de 0 a 500 reais mas os centavos também podem variar. 
 
@@ -273,7 +285,4 @@ tmdb.original_language.unique()
 
 
 
-
-
 Continuar: Aula 02 - Atividade 04 - iniciar leitura.
-Criar um novo repositorio privado
