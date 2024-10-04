@@ -283,6 +283,18 @@ EX: tmdb["original_language"].value_counts().to_frame().reset_index()
 ## *Adicionar uma seção com titulo em destaque no notebook:*
 * Vá em +Code e escreva o título. Mas para se obter mais destaque com o tamanho das letras e para que essa seção seja colapsada com as celulas de execução que ficam posterior a esse título, deve-se adicionar "#" ao inicio do Título.
 
+## *Visualiar as categorias:*
+* Para comparar categorias usamos plots de categoria, por exemplo no seaborn tem muitos plots de comparação de categoria. Um exemplo no seaborn é o gráfico de barras. 
+EX: 
+contagem_de_lingua = tmdb["original_language"].value_counts().to_frame().reset_index()
+contagem_de_lingua.columns = ["original_labguage","total"]
+contagem_de_lingua.head()
+sns.barplot(data = contagem_de_lingua)
 
 
-Continuar: Aula 02 - Atividade 04 - iniciar leitura.
+Continuar: Aula 02 - Atividade 04 - iniciar leitura. 06:31
+
+
+
+
+
