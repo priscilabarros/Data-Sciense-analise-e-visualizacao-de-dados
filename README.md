@@ -291,6 +291,14 @@ contagem_de_lingua.columns = ["original_labguage","total"]
 contagem_de_lingua.head()
 sns.barplot(data = contagem_de_lingua)
 
+* Criar uma matriz de 2 eixos. Por exemplo no eixo X ficará cada uma das linguas e no eixo Y o total de itens dessa lingua.
+EX: 
+contagem_de_lingua = tmdb["original_language"].value_counts().to_frame().reset_index()
+contagem_de_lingua.columns = ["original_language","total"]
+contagem_de_lingua.head()
+sns.barplot(x = "original_language", y = "total" , data = contagem_de_lingua )
+
+OBS: para descrever um x e um y é necessário ter um data frame.
 
 Continuar: Aula 02 - Atividade 04 - iniciar leitura. 06:31
 
